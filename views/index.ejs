@@ -1,10 +1,12 @@
-<h1>Index page!!</h1>
+<% include ./partials/header.ejs %>
 
 <% blogs.forEach(function(blog){ %>
-  <div class="">
+  <div class="entry">
     <h2><%= blog.title %></h2>
     <img src="<%= blog.image %>" alt="">
     <p><%= blog.created %></p>
     <p><%= blog.body %></p>
   </div>
 <% }) %>
+
+<% include ./partials/footer.ejs %>
